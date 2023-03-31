@@ -1,6 +1,6 @@
 # Sistem Informasi Manajemen - WIFI
 
-Ini adalah repository untuk Sistem Informasi Manajemen - WIFI, sebuah proyek kolaborasi antara akun GitHub [adnangomugomu](https://github.com/adnangomugomu) dan [niredocz](https://github.com/niredocz). Proyek ini bertujuan untuk membuat sebuah sistem manajemen WIFI yang dapat digunakan di berbagai tempat, seperti kantor, sekolah, dan lain sebagainya.
+Ini adalah repository untuk Sistem Informasi Manajemen - WIFI, sebuah proyek yang menggunakan framework Express JS yang dikembangkan oleh akun GitHub [adnangomugomu](https://github.com/adnangomugomu). Proyek ini bertujuan untuk membuat sebuah sistem manajemen WIFI yang dapat digunakan di berbagai tempat, seperti kantor, sekolah, dan lain sebagainya.
 
 ## Fitur
 
@@ -29,4 +29,4 @@ Proyek ini dilisensikan di bawah lisensi MIT. Silakan baca file [LICENSE](https:
 
 Kami sangat terbuka untuk kontribusi dari siapa saja. Silakan buat pull request jika Anda ingin memberikan kontribusi. Kami akan memeriksa setiap pull request dengan cermat sebelum digabungkan ke dalam proyek.
 
-Terima kasih telah menggunakan Sistem Informasi Manajemen - WIFI!
+Terima kasih telah menggunakan Sistem Informasi Manajemen - WIFI! 🚀

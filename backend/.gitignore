@@ -1,0 +1,14 @@
+# dependencies
+/node_modules
+
+# production build
+/build
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# runtime data
+*.log
+
+.env

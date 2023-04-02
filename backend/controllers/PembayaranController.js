@@ -81,11 +81,11 @@ exports.insert = async(req, res) => {
             tanggal: tanggal,
             bayar: bayar,
             catatan: catatan,
-            bukti: bukti,
+            bukti: bukti.replace(/^public\//, ''),
         });
 
         return res.json({
-            message: 'data berhasil di simpan',
+            msg: 'data berhasil di simpan',
             data: row,
         });
     } catch (err) {
@@ -146,6 +146,37 @@ exports.update = async(req, res) => {
 
         return res.json({
             message: 'data berhasil di simpan',
+        });
+    } catch (err) {
+        return res
+            .status(400)
+            .json({
+                msg: err.errors[0].message,
+            })
+    }
+}
+
+exports.updateBukti = async(req, res) => {
+    const id = req.params.id;
+    try {
+        var bukti = req.file.path;
+    } catch (error) {
+        return res.status(400).json({
+            msg: "No File is selected.",
+        });
+    }
+
+    try {
+        const row = await PembayaranModel.update({
+            bukti: bukti.replace(/^public\//, ''),
+        }, {
+            where: {
+                id: id,
+            }
+        });
+
+        return res.json({
+            msg: 'data berhasil di simpan',
         });
     } catch (err) {
         return res

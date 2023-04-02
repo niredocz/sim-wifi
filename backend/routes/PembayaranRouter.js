@@ -33,6 +33,7 @@ const fileFilter = function(req, file, cb) {
 };
 
 const upload = multer({ limits: 10000, storage: diskStorage, fileFilter: fileFilter });
+
 const kompress = function(req, res, next) {
 
     sharp(req.file.path)
@@ -51,5 +52,6 @@ router.get('/:id', VerifyToken.verify, PembayaranController.detail);
 router.post('/', VerifyToken.verify, upload.single('bukti'), kompress, PembayaranController.insert);
 router.delete('/:id', VerifyToken.verify, PembayaranController.delete);
 router.put('/:id', VerifyToken.verify, PembayaranController.update);
+router.put('/bukti/:id', VerifyToken.verify, upload.single('bukti'), kompress, PembayaranController.updateBukti);
 
 module.exports = router;

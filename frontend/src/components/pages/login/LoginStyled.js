@@ -20,7 +20,8 @@ export const LeftSection = styled.div`
   display: flex;
   border-radius: 15px;
   flex-direction: column;
-  background-color: #3432f9;
+  justify-content: space-between;
+  background-color: #4153ef;
 `
 
 export const RightSection = styled.div`
@@ -32,7 +33,7 @@ export const RightSection = styled.div`
 
 export const LoginTitle = styled.h2`
   font-size: 24px;
-  font-weight: 500;
+  font-weight: 600;
   margin-top: 20px;
 `
 
@@ -54,4 +55,48 @@ export const FormLabel = styled.label`
 export const FormWrapper = styled.div`
   width: 100%;
   margin-bottom: 15px;
+`
+
+export const InputText = styled.input`
+  padding: 10px 15px;
+  outline: none;
+  // border 1px solid #95a5a6;
+  border none;
+  box-shadow: 0px 0px 0px 2px #dbdbde inset;
+  border-radius: 8px;
+  width: 100%;
+`
+
+export const InputTextarea = styled.textarea`
+  padding: 10px 15px;
+  outline: none;
+  // border 1px solid #95a5a6;
+  border none;
+  box-shadow: 0px 0px 0px 2px #dbdbde inset;
+  border-radius: 8px;
+  width: 100%;
+  resize: vertical;
+`
+
+export const TosWrapper = styled.div`
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+`
+
+export const TosCheckbox = styled.input`
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+`
+
+export const SubmitButton = styled.button`
+  padding: 15px 20px;
+  background-color: #4153ef;
+  color: #fff;
+  outline: none;
+  font-size: 18px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
 `

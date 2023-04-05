@@ -13,15 +13,24 @@ import {
   TosWrapper,
   TosCheckbox,
   SubmitButton,
+  ImgLogin,
+  Link,
+  CopyrightText,
 } from "./LoginStyled"
+// import { Link } from "react-router-dom"
 
 function Login() {
+  const thisYear = new Date().getFullYear()
+
   return (
     <LoginWrapper>
       <CardLogin>
         <LeftSection>
-          <LoginTitle>Login SIM WiFi Ngawi</LoginTitle>
-          <img src="/img-login.png" alt="img-login" />
+          <LoginTitle>SIM WiFi Ngawi</LoginTitle>
+          <ImgLogin src="/img-login.png" alt="img-login" />
+          <CopyrightText>
+            Hak Cipta SIM WiFi Adnan Production © {thisYear}
+          </CopyrightText>
         </LeftSection>
         <RightSection>
           <FormLogin method="GET">
@@ -54,26 +63,26 @@ function Login() {
               </FormWrapper>
             </div>
             <FormWrapper>
-              <FormLabel htmlFor="alamat">Alamat Rumah</FormLabel>
-              <InputTextarea name="" id="alamat" rows="10"></InputTextarea>
-            </FormWrapper>
-            <FormWrapper>
               <FormLabel htmlFor="phone">No. HP</FormLabel>
               <InputText id="phone" type="text" />
+            </FormWrapper>
+            <FormWrapper>
+              <FormLabel htmlFor="alamat">Alamat Rumah</FormLabel>
+              <InputTextarea name="" id="alamat" rows="5"></InputTextarea>
             </FormWrapper>
 
             <TosWrapper>
               <TosCheckbox type="checkbox" name="" id="tos" />
 
-              <FormLabel htmlFor="tos" style={{ marginBottom: 0 }}>
+              <FormLabel htmlFor="tos" variant="term-of-service">
                 saya bersedia untuk menyetujui{" "}
-                <a href="#">syarat dan ketentuan</a> yang berlaku.
+                <Link href="/">syarat dan ketentuan</Link> yang berlaku.
               </FormLabel>
             </TosWrapper>
 
-            <p style={{ marginBottom: 10 }}>
-              Sudah memiliki akun ? <a href="#">Masuk disini.</a>
-            </p>
+            <h4 style={{ marginBottom: 25, color: "#2e444e" }}>
+              Sudah memiliki akun ? <Link href="/">Masuk disini.</Link>
+            </h4>
 
             <SubmitButton type="submit">Daftarkan Akun</SubmitButton>
           </FormLogin>

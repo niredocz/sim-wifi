@@ -5,42 +5,15 @@ import { Routes, Route } from "react-router-dom"
 import "./App.css"
 // import PrivateRoute from "./PrivateRoute"
 import Home from "./components/pages/home/Home"
-import Login from "./components/pages/login/Login"
+import Auth from "./components/pages/auth/Auth"
 
 function App() {
-  const [isLoggedIn, setIsLoggedIn] = useState(false)
-
-  const handleLogin = () => {
-    setIsLoggedIn(true)
-  }
-
   return (
     <>
-      {/* {isLoggedIn === true ? (
-        <div className="App">
-          <h1>SIM Wifi Rumah</h1>
-        </div>
-      ) : (
-        <>Login</>
-      )} */}
-
       <Routes>
-        {/* <Switch>
-          <Route
-            exact
-            path="/login"
-            element={<Login />}
-            onLogin={handleLogin}
-          />
-          <PrivateRoute
-            exact
-            path="/"
-            element={<Home />}
-            isLoggedIn={isLoggedIn}
-          />
-        </Switch> */}
         <Route path="/" element={<Home />} />
-        <Route path="/login" element={<Login />} />
+        <Route path="/login" element={<Auth isLoggedIn={true} />} />
+        <Route path="/register" element={<Auth isLoggedIn={false} />} />
       </Routes>
     </>
   )

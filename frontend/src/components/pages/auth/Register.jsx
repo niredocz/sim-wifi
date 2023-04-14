@@ -1,4 +1,8 @@
-import React from "react"
+import React, { useState } from "react"
+import { Link } from "react-router-dom"
+import axios from "axios"
+
+import "./auth.css"
 import {
   FormLogin,
   FormLabel,
@@ -8,10 +12,53 @@ import {
   TosWrapper,
   TosCheckbox,
   SubmitButton,
-  Link,
 } from "./AuthStyled"
 
 function Register() {
+  // const [userId, setUserId] = useState("")
+  // const [username, setUsername] = useState("")
+  // const [password, setPassword] = useState("")
+  // const [repeatPassword, setRepeatPassword] = useState("")
+  // const [countDownRedirect, setCountDownRedirect] = useState(3)
+
+  // useEffect(() => {
+  //   let countDown = setInterval(() => {
+  //     if (
+  //       username !== "" &&
+  //       password === repeatPassword &&
+  //       countDownRedirect <= 3
+  //     ) {
+  //       setCountDownRedirect((countDownRedirect -= 1))
+  //     }
+
+  //     if (countDownRedirect == 0) {
+  //       location.reload()
+  //     }
+  //   }, 1000)
+
+  //   return () => clearInterval(countDown)
+  // })
+
+  // const handleSubmit = (e) => {
+  //   e.preventDefault()
+
+  //   if (password === repeatPassword) {
+  //     axios
+  //       .post("http://localhost:3001/login", {
+  //         username,
+  //         password,
+  //       })
+  //       .then((response) => {
+  //         const authToken = response.data.accessToken
+  //         console.log(authToken)
+  //         console.log(response)
+  //       })
+  //       .catch((err) => {
+  //         console.log(err)
+  //       })
+  //   }
+  // }
+
   return (
     <FormLogin method="POST">
       <h1 style={{ marginBottom: 20 }}>Daftar Akun</h1>
@@ -54,12 +101,15 @@ function Register() {
 
         <FormLabel htmlFor="tos" variant="term-of-service">
           saya bersedia untuk menyetujui{" "}
-          <Link href="/">syarat dan ketentuan</Link> yang berlaku.
+          <Link to="/">syarat dan ketentuan</Link> yang berlaku.
         </FormLabel>
       </TosWrapper>
 
       <h4 style={{ marginBottom: 25, color: "#2e444e" }}>
-        Sudah memiliki akun ? <Link href="/login">Masuk disini.</Link>
+        Sudah memiliki akun ?{" "}
+        <Link className="direct-link" to="/login">
+          Masuk disini.
+        </Link>
       </h4>
 
       <SubmitButton type="submit">Daftarkan Akun</SubmitButton>

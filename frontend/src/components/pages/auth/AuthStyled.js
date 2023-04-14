@@ -118,15 +118,6 @@ export const FormControl = styled.div`
   display: grid;
 `
 
-export const Link = styled.a`
-  color: #2e444e;
-
-  &:hover,
-  &:focus {
-    color: #4153ef;
-  }
-`
-
 export const FormLabel = styled.label`
   display: block;
   font-size: 16px;

@@ -32,7 +32,7 @@ export const CardLogin = styled.div`
   margin: 30px;
   width: 100%;
 
-  @media screen and ${device.tablet} {
+  @media screen and (${device.tablet}) {
     flex-direction: column;
   }
 `
@@ -47,12 +47,12 @@ export const LeftSection = styled.div`
   justify-content: space-between;
   background-color: #4153ef;
 
-  @media screen and ${device.tablet} {
+  @media screen and (${device.tablet}) {
     position: relative;
     gap: 10px;
   }
 
-  @media screen and ${device.mobileL} {
+  @media screen and (${device.mobileL}) {
     gap: 20px;
     padding-right: 75px;
   }
@@ -64,11 +64,11 @@ export const RightSection = styled.div`
   max-width: 800px;
   background-color: #fff;
 
-  @media screen and ${device.tablet} {
+  @media screen and (${device.tablet}) {
     margin: 0 auto;
   }
 
-  @media screen and ${device.mobileL} {
+  @media screen and (${device.mobileL}) {
     width: 100%;
   }
 `
@@ -79,7 +79,7 @@ export const LoginTitle = styled.h2`
   margin-top: 20px;
   letter-spacing: 1px;
 
-  @media screen and ${device.mobileL} {
+  @media screen and (${device.mobileL}) {
     margin-top: 0;
   }
 `
@@ -89,14 +89,14 @@ export const ImgLogin = styled.img`
   margin: 0 auto;
   max-width: 350px;
 
-  @media screen and ${device.tablet} {
+  @media screen and (${device.tablet}) {
     position: absolute;
     max-width: 115px;
     bottom: 15px;
     right: 15px;
   }
 
-  @media screen and ${device.mobileL} {
+  @media screen and (${device.mobileL}) {
     max-width: 55px;
   }
 `
@@ -105,7 +105,7 @@ export const CopyrightText = styled.span`
   font-size: 16px;
   font-weight: 600;
 
-  @media screen and ${device.tablet} {
+  @media screen and (${device.tablet}) {
     font-size: 14px;
     line-height: 1.5rem;
   }
@@ -172,7 +172,7 @@ export const FormWrapper = styled.div`
 export const InputText = styled.input`
   padding: 10px 15px;
   outline: none;
-  border none;
+  border: none;
   box-shadow: 0px 0px 0px 2px #dbdbde inset;
   border-radius: 8px;
   width: 100%;
@@ -185,7 +185,7 @@ export const InputText = styled.input`
 export const InputTextarea = styled.textarea`
   padding: 10px 15px;
   outline: none;
-  border none;
+  border: none;
   box-shadow: 0px 0px 0px 2px #dbdbde inset;
   border-radius: 8px;
   width: 100%;
@@ -242,5 +242,42 @@ export const SubmitButton = styled.button`
   &:hover,
   &:focus {
     background-color: #2233cb;
+  }
+`
+
+export const AlertPopup = styled.div`
+  display: flex;
+  align-items: center;
+  padding: 15px;
+  font-weight: 500;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  color: rgba(155, 28, 28, 1);
+  border: 1px solid rgba(248, 180, 180, 1);
+  background-color: rgba(253, 242, 242, 1);
+
+  svg {
+    width: 1.5rem;
+    height: 1.5rem;
+    display: inline;
+    margin-right: 0.5rem;
+  }
+`
+
+export const FormSuccess = styled.div`
+  display: flex;
+  padding: 15px;
+  color: #2dac7c;
+  font-size: 1.1rem;
+  font-weight: 500;
+  border-radius: 10px;
+  border: 1px solid #2dac7c;
+  background-color: rgb(243, 250, 247);
+
+  svg {
+    width: 1.5rem;
+    height: 1.7rem;
+    display: inline;
+    margin-right: 0.5rem;
   }
 `
